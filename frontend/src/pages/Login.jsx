@@ -16,7 +16,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await api.post("/api/auth/login", data);
+      const res = await api.post("/api/auth/login", formData);
 
       login(res.data);
 
