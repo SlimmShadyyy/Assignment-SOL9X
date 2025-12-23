@@ -15,7 +15,7 @@ export default function Signup() {
     e.preventDefault();
 
     try {
-      await axios.post("/api/auth/signup", formData);
+      await api.post("/api/auth/signup", formData);
       alert("Signup successful. Please login.");
       navigate("/login");
     } catch (err) {
