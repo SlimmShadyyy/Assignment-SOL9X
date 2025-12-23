@@ -21,7 +21,7 @@ export default function StudentDashboard() {
 
   const handleUpdate = async () => {
     try {
-      const res = await axios.put("/api/student/me", profile, {
+      const res = await api.put("/api/student/me", profile, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
