@@ -13,12 +13,15 @@ export default function Signup() {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-
+    console.log("SIGNUP DATA:", formData);
+  
     try {
-      await api.post("/api/auth/signup", formData);
+      const res = await api.post("/api/auth/signup", formData);
+      console.log("SIGNUP RES:", res.data);
       alert("Signup successful. Please login.");
       navigate("/login");
     } catch (err) {
+      console.log("SIGNUP ERROR:", err.response);
       alert(err.response?.data?.message || "Signup failed");
     }
   };
