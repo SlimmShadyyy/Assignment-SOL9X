@@ -6,7 +6,7 @@ export default function StudentDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
+    api
       .get("/api/student/me", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
