@@ -5,7 +5,7 @@ export default function AdminDashboard() {
   const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
-    const res = await axios.get("/api/admin/students", {
+    const res = await api.get("/api/admin/students", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -20,7 +20,7 @@ export default function AdminDashboard() {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this student?")) return;
 
-    await axios.delete(`/api/admin/students/${id}`, {
+    await api.delete(`/api/admin/students/${id}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
