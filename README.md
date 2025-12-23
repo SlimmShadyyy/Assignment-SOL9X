@@ -1,4 +1,7 @@
 # MERN Auth Dashboard
+Admin login credentials:
+Email:admin@gmail.com
+Password: 123456
 
 A MERN stack application implementing authentication, role-based access control,
 and separate dashboards for Admin and Student users.
